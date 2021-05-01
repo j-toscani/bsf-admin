@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_match_matchresults",
+  "info": {
+    "name": "Matchresult",
+    "icon": "calendar-check"
+  },
+  "options": {},
+  "attributes": {
+    "player": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "goals": {
+      "type": "integer"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "assists": {
+      "type": "integer"
+    },
+    "saves": {
+      "type": "integer"
+    },
+    "shots": {
+      "type": "integer"
+    }
+  }
+}

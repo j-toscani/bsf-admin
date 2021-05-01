@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tournaments",
+  "info": {
+    "name": "Tournament",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "teamsize": {
+      "type": "enumeration",
+      "enum": [
+        "one",
+        "two",
+        "three"
+      ]
+    },
+    "contestants": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "results": {
+      "type": "component",
+      "repeatable": true,
+      "component": "match.game-result"
+    }
+  }
+}

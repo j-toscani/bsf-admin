@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "name": "player"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gamertag": {
+      "type": "string"
+    },
+    "discord": {
+      "type": "boolean"
+    },
+    "telegram": {
+      "type": "boolean"
+    },
+    "registered_as": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "mailAdress": {
+      "type": "email"
+    },
+    "mail": {
+      "type": "boolean"
+    },
+    "tournaments": {
+      "collection": "tournament"
+    }
+  }
+}

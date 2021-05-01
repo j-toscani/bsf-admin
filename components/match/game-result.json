@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_match_game_results",
+  "info": {
+    "name": "Game Result",
+    "icon": "people-carry"
+  },
+  "options": {},
+  "attributes": {
+    "team_a": {
+      "type": "component",
+      "repeatable": true,
+      "component": "match.matchresult"
+    },
+    "team_b": {
+      "type": "component",
+      "repeatable": true,
+      "component": "match.matchresult"
+    }
+  }
+}
