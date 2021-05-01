@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  bsf-dev-cms:
+    image: strapi/strapi
+    container_name: bsf-dev-cms
+    restart: unless-stopped
+    env_file: .dev.env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+    #    links:
+    #      - mongo:mongo
+    networks:
+      - bsf-dev-network
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./:/srv/app
+
+  bsf-cms-dev-db:
+    image: mongo
+    container_name: ${DATABASE_HOST}
+    restart: unless-stopped
+    env_file: .dev.env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    networks:
+      - bsf-dev-network
+    volumes:
+      - bsf-dev-data:/data/db
+    ports:
+      - "27017:27017"
+
+networks:
+  bsf-dev-network:
+    driver: bridge
+
+volumes:
+  bsf-dev-data:
