@@ -10,7 +10,7 @@
     "strapi": "strapi",
     "docker-build": "docker build -t bsf-admin .",
     "compose-start:dev": "docker-compose -f docker-compose.dev.yml up",
-    "compose-stop:dev": "docker-compose -f docker-compose.dev.yml down"
+    "compose-stop:dev": "docker-compose -f docker-compose.dev.yml down --remove-orphans"
   },
   "devDependencies": {},
   "dependencies": {
