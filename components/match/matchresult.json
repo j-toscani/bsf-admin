@@ -2,13 +2,13 @@
   "collectionName": "components_match_matchresults",
   "info": {
     "name": "Matchresult",
-    "icon": "calendar-check"
+    "icon": "calendar-check",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "player": {
-      "plugin": "users-permissions",
-      "model": "user"
+      "model": "player"
     },
     "goals": {
       "type": "integer"
