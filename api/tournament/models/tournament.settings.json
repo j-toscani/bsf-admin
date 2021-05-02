@@ -26,9 +26,8 @@
         "three"
       ]
     },
-    "contestants": {
-      "plugin": "users-permissions",
-      "collection": "user"
+    "players": {
+      "collection": "player"
     },
     "results": {
       "type": "component",
