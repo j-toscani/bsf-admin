@@ -26,13 +26,14 @@
         "three"
       ]
     },
-    "players": {
+    "contestants": {
+      "via": "participated_in",
       "collection": "player"
     },
-    "results": {
+    "matches": {
       "type": "component",
       "repeatable": true,
-      "component": "match.game-result"
+      "component": "match.game"
     }
   }
 }

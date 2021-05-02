@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "players",
   "info": {
-    "name": "player"
+    "name": "player",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -20,18 +21,24 @@
     "telegram": {
       "type": "boolean"
     },
-    "registered_as": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "mailAdress": {
       "type": "email"
     },
     "mail": {
       "type": "boolean"
     },
-    "tournaments": {
-      "collection": "tournament"
+    "registered_as": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "participated_in": {
+      "via": "contestants",
+      "collection": "tournament",
+      "dominant": true
+    },
+    "performances": {
+      "via": "player",
+      "collection": "performance"
     }
   }
 }

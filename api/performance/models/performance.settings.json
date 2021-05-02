@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performances",
+  "info": {
+    "name": "Performance"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "player": {
+      "model": "player",
+      "via": "performances"
+    },
+    "points": {
+      "type": "component",
+      "repeatable": false,
+      "component": "match.matchresult"
+    }
+  }
+}

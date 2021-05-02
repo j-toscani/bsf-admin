@@ -1,15 +1,12 @@
 {
-  "collectionName": "components_match_matchresults",
+  "collectionName": "components_match_points",
   "info": {
-    "name": "Matchresult",
+    "name": "Points",
     "icon": "calendar-check",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "player": {
-      "model": "player"
-    },
     "goals": {
       "type": "integer"
     },

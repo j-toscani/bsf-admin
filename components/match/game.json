@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_match_games",
+  "info": {
+    "name": "Game",
+    "icon": "gamepad"
+  },
+  "options": {},
+  "attributes": {
+    "team_a": {
+      "collection": "performance"
+    },
+    "team_b": {
+      "collection": "performance"
+    }
+  }
+}
