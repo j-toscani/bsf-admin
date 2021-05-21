@@ -9,11 +9,17 @@ module.exports = {
   find(params, populate) {
     return strapi
       .query("tournament")
-      .find(params, [{ path: "games", populate: ["performances"] }]);
+      .find(params, [
+        "contestants",
+        { path: "games", populate: ["performances"] },
+      ]);
   },
   findOne(params, populate) {
     return strapi
       .query("tournament")
-      .find(params, [{ path: "games", populate: ["performances"] }]);
+      .find(params, [
+        "contestants",
+        { path: "games", populate: ["performances"] },
+      ]);
   },
 };
