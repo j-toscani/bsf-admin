@@ -19,16 +19,16 @@
     "p_id": {
       "type": "uid"
     },
-    "game": {
-      "via": "performances",
-      "model": "game"
-    },
     "stats": {
       "type": "dynamiczone",
       "components": [
         "results.rocket-league"
       ],
       "max": 1
+    },
+    "game": {
+      "via": "performances",
+      "model": "game"
     }
   }
 }
