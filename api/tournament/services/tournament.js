@@ -11,4 +11,9 @@ module.exports = {
       .query("tournament")
       .find(params, [{ path: "games", populate: ["performances"] }]);
   },
+  findOne(params, populate) {
+    return strapi
+      .query("tournament")
+      .find(params, [{ path: "games", populate: ["performances"] }]);
+  },
 };
