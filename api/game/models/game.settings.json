@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "games",
+  "info": {
+    "name": "game",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_team_a": {
+      "type": "string"
+    },
+    "name_team_b": {
+      "type": "string"
+    },
+    "tournament": {
+      "via": "games",
+      "model": "tournament"
+    },
+    "g_id": {
+      "type": "uid"
+    },
+    "performances": {
+      "via": "game",
+      "collection": "performance"
+    },
+    "teams": {
+      "type": "component",
+      "repeatable": false,
+      "component": "match.teams"
+    }
+  }
+}

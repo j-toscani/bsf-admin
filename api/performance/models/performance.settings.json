@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "performances",
   "info": {
-    "name": "Performance"
+    "name": "Performance",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,13 +13,22 @@
   "pluginOptions": {},
   "attributes": {
     "player": {
-      "model": "player",
-      "via": "performances"
+      "via": "performances",
+      "model": "player"
     },
-    "points": {
-      "type": "component",
-      "repeatable": false,
-      "component": "match.matchresult"
+    "p_id": {
+      "type": "uid"
+    },
+    "stats": {
+      "type": "dynamiczone",
+      "components": [
+        "results.rocket-league"
+      ],
+      "max": 1
+    },
+    "game": {
+      "via": "performances",
+      "model": "game"
     }
   }
 }
