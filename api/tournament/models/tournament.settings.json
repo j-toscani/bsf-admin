@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -30,10 +30,18 @@
       "via": "participated_in",
       "collection": "player"
     },
-    "matches": {
-      "type": "component",
-      "repeatable": true,
-      "component": "match.game"
+    "games": {
+      "via": "tournament",
+      "collection": "game"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "host": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "tournaments"
     }
   }
 }
