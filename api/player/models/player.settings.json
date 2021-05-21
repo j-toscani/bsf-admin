@@ -13,19 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "gamertag": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "discord": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "telegram": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "mailAdress": {
       "type": "email"
     },
     "mail": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "registered_as": {
       "plugin": "admin",
