@@ -15,11 +15,11 @@ module.exports = {
       ]);
   },
   findOne(params, populate) {
-    return strapi
-      .query("tournament")
-      .findOne(params, [
-        "contestants",
-        { path: "games", populate: ["performances"] },
-      ]);
+    return strapi.query("tournament").findOne(params, [
+      {
+        path: "games",
+        populate: [{ path: "performances", populate: "player" }],
+      },
+    ]);
   },
 };
