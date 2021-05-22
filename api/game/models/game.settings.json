@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name_team_a": {
-      "type": "string"
-    },
-    "name_team_b": {
-      "type": "string"
-    },
     "tournament": {
       "via": "games",
       "model": "tournament"
@@ -31,8 +25,8 @@
     },
     "teams": {
       "type": "component",
-      "repeatable": false,
-      "component": "match.teams"
+      "repeatable": true,
+      "component": "match.team"
     }
   }
 }

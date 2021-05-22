@@ -1,16 +1,16 @@
 {
   "collectionName": "components_match_teams",
   "info": {
-    "name": "Teams",
+    "name": "Team",
     "icon": "grin-tears"
   },
   "options": {},
   "attributes": {
-    "team_a": {
+    "players": {
       "collection": "player"
     },
-    "team_b": {
-      "collection": "player"
+    "name": {
+      "type": "string"
     }
   }
 }
