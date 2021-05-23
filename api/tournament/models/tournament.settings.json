@@ -36,7 +36,7 @@
     },
     "active": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "host": {
       "plugin": "users-permissions",
