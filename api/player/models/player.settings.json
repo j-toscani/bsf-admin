@@ -32,8 +32,9 @@
       "default": false
     },
     "registered_as": {
-      "plugin": "admin",
-      "model": "user"
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "is"
     },
     "participated_in": {
       "via": "contestants",

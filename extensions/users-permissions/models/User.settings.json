@@ -62,6 +62,10 @@
     "tournaments": {
       "via": "host",
       "collection": "tournament"
+    },
+    "is": {
+      "via": "registered_as",
+      "model": "player"
     }
   }
 }
