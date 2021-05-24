@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_results_rocket_leagues",
+  "info": {
+    "name": "Rocket League",
+    "icon": "volleyball-ball",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "goals": {
+      "type": "integer"
+    },
+    "shots": {
+      "type": "integer"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "saves": {
+      "type": "integer"
+    },
+    "assists": {
+      "type": "integer"
+    }
+  }
+}
